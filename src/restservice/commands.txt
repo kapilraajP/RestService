@@ -1,25 +1,16 @@
     curl -v -X POST -d \
     '{ "Customer": { "ID": "100500", "Name": "XYZ", "Description": "Sample customer."}}' \
     "http://localhost:9090/customermgt/customer" -H "Content-Type:application/json"
-
     Output
     {"status":"Customer Created.","customerId":"100500"} 
-
-
-    
     
 
     curl "http://localhost:9090/customermgt/customer/100500"
-
     Output : 
     {"Customer":{"ID":"100500","Name":"XYZ","Description":"Sample order."}}
 
 
-
-
-
     curl -X PUT -d '{ "Customer": {"Name": "XYZ", "Description": "Updated customer."}}' \
     "http://localhost:9090/customermgt/customer/100500" -H "Content-Type:application/json"
-    
     Output: 
     {"Customer":{"ID":"100500","Name":"XYZ","Description":"Updated customer."}}
