@@ -1,0 +1,5 @@
+
+curl -X POST -d "{'id':1, 'name':'Name1','age':27}" http://localhost:3306/data/customers
+curl -X GET http://localhost:3306/data/customers
+curl -X GET http://localhost:3306/data/customers/1
+curl -X PUT -d "{'id': 1, 'name':'Name2','age':45}" http://localhost:3306/data/customers
